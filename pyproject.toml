@@ -1,0 +1,16 @@
+[project]
+name = "gbigcli"
+version = "0.1.0"
+dependencies = ["typer","rdkit","gbigsmiles","pandas","openpyxl","fastparquet","pytest","scikit-learn","pipx"]
+[build-system]
+requires = ["setuptools>=58", "setuptools-scm>=6"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# For smarter version schemes and other configuration options,
+# check out https://github.com/pypa/setuptools_scm
+version_scheme = "no-guess-dev"
+
+[project.scripts]
+gbigsmiles = "gbigcli.cli:application"
+
